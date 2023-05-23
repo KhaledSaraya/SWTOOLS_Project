@@ -40,8 +40,8 @@ public class Restaurant_Service {
     }
     
     @POST
-    @Path("get_res_id/{res_id}/{listofmeals}")
-    public void createMenu(@PathParam("res_id")int restaurantId, @PathParam("listofmeals") Meal[] meals ) {
+    @Path("create_res_menu/{res_id}/{listofmeals1}")
+    public void createMenu(@PathParam("res_id")int restaurantId, @PathParam("listofmeals1") Meal[] meals ) {
         Restaurant restaurant = entityManager.find(Restaurant.class, restaurantId);
         if (restaurant != null) 
         {
@@ -51,7 +51,9 @@ public class Restaurant_Service {
         }
         }
     
-    public void editRestaurantMenu(@PathParam("res_id")int restaurantId,@PathParam("listofmeals") Meal[] newMeals) {
+    @POST
+    @Path("edit_res_menu/{res_id}/{listofmeals2}")
+    public void editRestaurantMenu(@PathParam("res_id")int restaurantId,@PathParam("listofmeals2") Meal[] newMeals) {
         Restaurant restaurant = entityManager.find(Restaurant.class, restaurantId);
         if (restaurant != null) {
                 restaurant.setList_of_meals(newMeals);
@@ -59,6 +61,8 @@ public class Restaurant_Service {
             }
         }
     
+    @POST
+    @Path("generate_res_report/{res_id}")
     public void generateRestaurantReport(@PathParam("res_id")int restaurantId) {
         // Calculate total earnings
         TypedQuery<Order> OQuery = entityManager.createQuery("SELECT SUM(o.total_account) FROM Order o WHERE o.order_fk_restaurantId = :restaurantId AND o.order_status = :delivered", Order.class);

@@ -5,6 +5,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -19,7 +21,9 @@ public class Runner_Service {
 
 	    @PersistenceContext(unitName = "Project")
 	    private EntityManager entityManager;
-
+	    
+	    @POST
+	    @Path("mark_ord_delivered/{ord_id}/{run_id}")
 	    public void markOrderDelivered(@PathParam("ord_id")int orderId,@PathParam("run_id")int runnerId) {
 	        // Retrieve the order and runner from the database
 	        Order order = entityManager.find(Order.class, orderId);
@@ -36,6 +40,8 @@ public class Runner_Service {
 	        }
 	    }
 	    
+	    @GET
+	    @Path("get_num_of_trips/{run_id}")
 	    public int getNumberOfTripsCompleted(@PathParam("run_id")int runnerId) {
 	        TypedQuery<Runner> query = entityManager.createQuery("SELECT COUNT(o) FROM Order o WHERE o.runner.id = :runnerId AND o.status = :status", Runner.class);
 	        query.setParameter("runnerId", runnerId);
