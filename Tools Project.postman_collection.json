@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "997b6dc6-19a0-4151-9d4c-e104e41e315f",
+		"name": "Tools Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27025184"
+	},
+	"item": [
+		{
+			"name": "Register Class",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{“name”:ahmed,\r\n “Password”:”12h”\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Register/signup/khaled/K10/khaled@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Register",
+								"signup",
+								"khaled",
+								"K10",
+								"khaled@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Register/log/khaled@gmail.com/K10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Register",
+								"log",
+								"khaled@gmail.com",
+								"K10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Runner Class",
+			"item": [
+				{
+					"name": "Mark Orders Delivered",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Run_Service/mark_ord_delivered/1/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Run_Service",
+								"mark_ord_delivered",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Number of trips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Run_Service/get_num_of_trips/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Run_Service",
+								"get_num_of_trips",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restaurant Class",
+			"item": [
+				{
+					"name": "Get Restaurant By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Res_Service/get_res_id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Res_Service",
+								"get_res_id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Restaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Res_Service/get_all_res",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Res_Service",
+								"get_all_res"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Menu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Res_Service/create_res_menu/1/[Chicken, meat,appitizer]",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Res_Service",
+								"create_res_menu",
+								"1",
+								"[Chicken, meat,appitizer]"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Restaurant Menu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Res_Service/edit_res_menu/2/[Chicken, meat,appitizer]",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Res_Service",
+								"edit_res_menu",
+								"2",
+								"[Chicken, meat,appitizer]"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Restaurant Report",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Res_Service/generate_res_report/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Res_Service",
+								"generate_res_report",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer Service",
+			"item": [
+				{
+					"name": "Get Order By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Cust_Service/get_ord_by_id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Cust_Service",
+								"get_ord_by_id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Cust_Service/get_all_orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Cust_Service",
+								"get_all_orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Restaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Cust_Service/get_all_res",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Cust_Service",
+								"get_all_res"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Cust_Service/create_order/1/1/[chicken,meat,appitizer]/R1/5/Ahmed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Cust_Service",
+								"create_order",
+								"1",
+								"1",
+								"[chicken,meat,appitizer]",
+								"R1",
+								"5",
+								"Ahmed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calculate Total Receipt Value",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Cust_Service/calc_total/[chicken,meat,appitizer]/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Cust_Service",
+								"calc_total",
+								"[chicken,meat,appitizer]",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Select Random Available Runner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/AL_AKEEL/api/Cust_Service/select_random_run",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"AL_AKEEL",
+								"api",
+								"Cust_Service",
+								"select_random_run"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
